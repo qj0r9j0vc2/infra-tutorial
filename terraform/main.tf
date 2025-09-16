@@ -5,9 +5,19 @@ terraform {
 provider "aws" { region = var.region }
 
 # variables.tf
-variable "region" { type = string; default = "ap-northeast-2" }
-variable "key_name" { type = string }
-variable "instance_type" { type = string; default = "t3.small" }
+variable "region" {
+  type = string
+  default = "ap-northeast-2"
+}
+
+variable "key_name" {
+  type = string
+}
+
+variable "instance_type" {
+  type = string
+  default = "t3.small"
+}
 
 # main.tf
 resource "aws_instance" "demo" {
